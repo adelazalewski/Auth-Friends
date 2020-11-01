@@ -13,7 +13,7 @@ function App() {
       <Switch>
       <PrivateRoute exact path="/homepage" component={FriendsHomePage} />
       <Route path="/login" component={Login} />
-        {/* <Route path="" component={Login} /> */}
+      <Route path="" component={Login} />
       </Switch>
       
       <Footer />

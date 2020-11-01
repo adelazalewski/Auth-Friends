@@ -22,8 +22,9 @@ console.log(friends);
         <>
         {friends.length < 1 ? <Loader type="ThreeDots" color="#A52A2A" heigth={40} width={40} /> : (
             <div className="friends-list">
+                <h1>Say Hi To Your New Friends</h1>
             {friends.map((friend) => {
-                <FriendCard key={friend.id} friend={friend}/>
+                return <FriendCard key={friend.id} friend={friend}/>
             })}
         </div>
         )}

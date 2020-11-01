@@ -16,7 +16,7 @@ export default function AddFriend() {
     }
     
     const submit = (e) => {
-        e.preventDefault();
+        
         setFriend({
             name: "",
         age: "",

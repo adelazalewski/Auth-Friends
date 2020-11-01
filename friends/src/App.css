@@ -12,6 +12,11 @@
 img{
   width: 70%;
 }
+header nav{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
 header h1{
   font-family: 'Syne Mono', monospace;
   padding: 0.5rem;
@@ -44,3 +49,23 @@ label{
   color: white;
 }
 
+@media(min-width: 400px){
+  
+  form{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  button{
+    margin: 1rem;
+    width: 30%;
+  }
+  input{
+    width: 40%;
+  }
+  label{
+    width: 40%;
+  }
+}
