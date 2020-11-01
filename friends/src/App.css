@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+img{
+  width: 70%;
+}
+header h1{
+  font-family: 'Syne Mono', monospace;
+  padding: 0.5rem;
+  font-size: 145%;
+}
+header .login-link{
+  text-decoration: none;
+  color: white;
+}
+label{
+  float: left;
+  padding: 1rem;
+}
+.friend-name{
+  color: white;
+}
+.friends-list{
+  color: white;
+}
+.brown{
+  color: #A52A2A
+}
+.yellow{
+  color: yellow
+}
+.blue{
+  color: blue;
+}
+.white{
+  color: white;
+}
+
