@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
+//REDUX
+import {connect} from "react-redux";
+import {postToFriends} from "../actions/actions";
 
-export default function AddFriend() {
+ function AddFriend(props) {
     const [friend, setFriend] = useState({
         name: "",
         age: "",
@@ -16,19 +18,20 @@ export default function AddFriend() {
     }
     
     const submit = (e) => {
-        
+        e.preventDefault();
         setFriend({
             name: "",
         age: "",
         email: ""
         });
-        axiosWithAuth().post("http://localhost:5000/api/friends", friend)
-        .then((res) => {
-            console.log("post friend to server res: ",res);
-        })
-        .catch((err) => {
-            console.log("post friend to server err: ", err);
-        })
+        props.postToFriends(friend);
+        // axiosWithAuth().post("http://localhost:5000/api/friends", friend)
+        // .then((res) => {
+        //     console.log("post friend to server res: ",res);
+        // })
+        // .catch((err) => {
+        //     console.log("post friend to server err: ", err);
+        // })
     }
 
     return (
@@ -44,3 +47,9 @@ export default function AddFriend() {
         </form>
     )
 }
+const mapStateToProps = (state) => {
+    return{
+        friendsList: state.friendsList
+    }
+}
+export default connect(mapStateToProps, {postToFriends})(AddFriend);
